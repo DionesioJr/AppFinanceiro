@@ -27,14 +27,15 @@ class Home extends StatelessWidget {
         title: Text("Dispesas Pessoais"),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             width: double.infinity,
+            height: 200,
             child: Card(
               child: Text("Grafico"),
-              color: Colors.green,
+              color: Colors.blueGrey,
               elevation: 5,
             ),
           ),
@@ -54,11 +55,10 @@ class Home extends StatelessWidget {
                             fontSize: 20,
                             color: Colors.black87),
                       ),
-                      margin:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.black12, width: 2)),
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(8),
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,6 +81,28 @@ class Home extends StatelessWidget {
               );
               // exibindo a lista
             }).toList(),
+          ),
+          Card(
+            elevation: 5,
+            child: Padding(
+              padding: const EdgeInsets.all(8),
+              child: Column(
+                children: [
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Título'),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Valor (R\$)'),
+                  ),
+                  FlatButton(
+                    child: Text("Nova Dispesa"),
+                    color: Colors.blue,
+                    textColor: Colors.white,
+                    onPressed: () {},
+                  )
+                ],
+              ),
+            ),
           )
         ],
       ),
