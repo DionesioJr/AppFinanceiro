@@ -16,8 +16,13 @@ class AppFinanceiro extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Versão inicial"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Dispesas Pessoais"),
+      ),
+      body: Center(
+        child: Text("Versão inicial"),
+      ),
     );
   }
 }
