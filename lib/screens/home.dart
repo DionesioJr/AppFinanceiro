@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class Home extends StatelessWidget {
+  final titleController = TextEditingController();
+  final valueController = TextEditingController();
+
   final _transation = [
     Transation(
         id: '0000001',
@@ -89,16 +92,21 @@ class Home extends StatelessWidget {
               child: Column(
                 children: [
                   TextField(
+                    controller: titleController,
                     decoration: InputDecoration(labelText: 'Título'),
                   ),
                   TextField(
+                    controller: valueController,
                     decoration: InputDecoration(labelText: 'Valor (R\$)'),
                   ),
                   FlatButton(
                     child: Text("Nova Dispesa"),
                     color: Colors.blue,
                     textColor: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      print(titleController.text);
+                      print(valueController.text);
+                    },
                   )
                 ],
               ),
