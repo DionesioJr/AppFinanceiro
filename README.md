@@ -1,4 +1,4 @@
-# app_financeiro
+# App Financeiro
 
 A new Flutter project.
 
