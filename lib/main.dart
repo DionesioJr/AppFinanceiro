@@ -1,3 +1,4 @@
+import 'package:app_financeiro/screens/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,21 +9,7 @@ class AppFinanceiro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Dispesas Pessoais"),
-      ),
-      body: Center(
-        child: Text("Versão inicial"),
-      ),
+      home: Home(),
     );
   }
 }
