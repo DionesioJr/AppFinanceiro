@@ -6,7 +6,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Dispesas Pessoais"),
+        title: Text("Despesas Pessoais"),
       ),
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.spaceAround,
