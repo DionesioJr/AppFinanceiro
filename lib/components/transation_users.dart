@@ -16,6 +16,11 @@ class _TransationUsersState extends State<TransationUsers> {
         titulo: 'Fatura do cartão',
         value: 1023.30,
         date: DateTime.now()),
+    Transation(
+        id: '0000001',
+        titulo: 'Fatura do cartão',
+        value: 1023.30,
+        date: DateTime.now()),
   ];
 
   _addTransation(String titulo, double value) {
@@ -34,8 +39,8 @@ class _TransationUsersState extends State<TransationUsers> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TransationList(_transation),
         TransationForm(_addTransation),
+        TransationList(_transation),
       ],
     );
   }

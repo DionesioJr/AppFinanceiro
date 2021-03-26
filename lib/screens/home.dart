@@ -8,21 +8,23 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text("Despesas Pessoais"),
       ),
-      body: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: double.infinity,
-            height: 200,
-            child: Card(
-              child: Text("Grafico"),
-              color: Colors.blueGrey,
-              elevation: 5,
+      body: SingleChildScrollView(
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              width: double.infinity,
+              height: 200,
+              child: Card(
+                child: Text("Grafico"),
+                color: Colors.blueGrey,
+                elevation: 5,
+              ),
             ),
-          ),
-          TransationUsers(),
-        ],
+            TransationUsers(),
+          ],
+        ),
       ),
     );
   }
