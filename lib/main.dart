@@ -11,6 +11,10 @@ class AppFinanceiro extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange,
+        accentColor: Colors.lightGreenAccent,
+      ),
     );
   }
 }

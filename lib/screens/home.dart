@@ -34,6 +34,8 @@ class _HomeState extends State<Home> {
     setState(() {
       _transation.add(newTransation);
     });
+
+    Navigator.of(context).pop();
   }
 
   _addModalForm(BuildContext context) {
@@ -77,7 +79,7 @@ class _HomeState extends State<Home> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
+        backgroundColor: Theme.of(context).accentColor,
         tooltip: "Nova despesa",
         child: Icon(Icons.add),
         onPressed: () {
