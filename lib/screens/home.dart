@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:app_financeiro/components/transation_form.dart';
 import 'package:app_financeiro/components/transation_list.dart';
 import 'package:app_financeiro/models/transation.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -60,23 +61,52 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: double.infinity,
-              height: 200,
-              child: Card(
-                child: Text("Grafico"),
-                color: Colors.blueGrey,
-                elevation: 5,
+        child: _transation.isEmpty
+            ? Column(
+                children: [
+                  SizedBox(
+                    height: 32,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 32,
+                    ),
+                    child: Text(
+                      "Nenhuma despesa cadastrada..",
+                      style: TextStyle(
+                        fontSize: 24,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 350,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 64),
+                      child: SvgPicture.asset(
+                        'assets/images/undraw_empty_xct9.svg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            : Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 200,
+                    child: Card(
+                      child: Text("Grafico"),
+                      color: Colors.blueGrey,
+                      elevation: 5,
+                    ),
+                  ),
+                  // TransationUsers(),
+                  TransationList(_transation),
+                ],
               ),
-            ),
-            // TransationUsers(),
-            TransationList(_transation),
-          ],
-        ),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).accentColor,
@@ -86,7 +116,7 @@ class _HomeState extends State<Home> {
           return _addModalForm(context);
         },
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
