@@ -12,9 +12,9 @@ class AppFinanceiro extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Home(),
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
-        accentColor: Colors.lightGreenAccent,
-      ),
+          primarySwatch: Colors.deepOrange,
+          accentColor: Colors.lightGreenAccent,
+          fontFamily: 'Roboto'),
     );
   }
 }

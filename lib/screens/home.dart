@@ -11,17 +11,17 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final _transation = [
-    Transation(
-        id: '0000001',
-        titulo: 'Fatura do cartão',
-        value: 1023.30,
-        date: DateTime.now()),
-    Transation(
-        id: '0000001',
-        titulo: 'Fatura do cartão',
-        value: 1023.30,
-        date: DateTime.now()),
+  final List<Transation> _transation = [
+    // Transation(
+    //     id: '0000001',
+    //     titulo: 'Fatura do cartão',
+    //     value: 1023.30,
+    //     date: DateTime.now()),
+    // Transation(
+    //     id: '0000001',
+    //     titulo: 'Fatura do cartão',
+    //     value: 1023.30,
+    //     date: DateTime.now()),
   ];
 
   _addTransation(String titulo, double value) {
